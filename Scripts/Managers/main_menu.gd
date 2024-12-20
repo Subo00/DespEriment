@@ -2,7 +2,6 @@ extends Control
 
 @onready var settings_menu: Control = $Settings
 @onready var v_box_container: VBoxContainer = $VBoxContainer
-@onready var v_box_container_settings: VBoxContainer = $VBoxContainer2
 
 
 func _on_options_button_pressed() -> void:

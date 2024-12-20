@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cccjc6wde3l2i"]
+[gd_scene load_steps=12 format=3 uid="uid://cccjc6wde3l2i"]
 
 [ext_resource type="Texture2D" uid="uid://g4yirgx7a2ub" path="res://Assets/Art/MainMenu/main_menu_bg.png" id="1_gqiri"]
 [ext_resource type="Script" path="res://Scripts/Managers/main_menu.gd" id="1_rgh5b"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://bex08065eka1" path="res://Assets/Fonts/W95FA.otf" id="5_1juno"]
 [ext_resource type="PackedScene" uid="uid://gcyu0c85utl8" path="res://Scenes/MainMenu/Button.tscn" id="5_c40c5"]
 [ext_resource type="PackedScene" uid="uid://dqnnq75n6kw0e" path="res://Scenes/Managers/Audio/Settings.tscn" id="8_06e8q"]
+[ext_resource type="AudioStream" uid="uid://bkt211ttvbvr6" path="res://Assets/Sounds/main_menu_music.mp3" id="9_y8w8i"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ymwge"]
 animations = [{
@@ -100,16 +101,25 @@ vertical_alignment = 1
 [node name="Settings" parent="." instance=ExtResource("8_06e8q")]
 visible = false
 layout_mode = 1
+offset_left = 61.0
+offset_top = 48.0
+offset_right = -59.0
+offset_bottom = -47.0
 
 [node name="BackButton" parent="Settings" instance=ExtResource("5_c40c5")]
 custom_minimum_size = Vector2(50, 30)
 layout_mode = 0
-offset_left = 210.0
-offset_top = 222.0
-offset_right = 260.0
-offset_bottom = 252.0
+offset_left = 151.0
+offset_top = 142.0
+offset_right = 201.0
+offset_bottom = 172.0
 text = "Back
 "
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_y8w8i")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]

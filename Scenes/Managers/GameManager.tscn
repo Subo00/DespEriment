@@ -26,7 +26,7 @@ script = ExtResource("6_e4gxv")
 
 [node name="ProCam2D" type="Node2D" parent="CameraStuff"]
 z_index = 4096
-position = Vector2(244, 136)
+position = Vector2(242, 134)
 script = ExtResource("4_252y5")
 process_frame = 2
 follow_mode = 0
@@ -61,12 +61,22 @@ global_debug_draw = false
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = -240.0
-offset_top = -137.0
-offset_right = 240.0
-offset_bottom = 138.0
+offset_left = -244.0
+offset_top = -130.0
+offset_right = 236.0
+offset_bottom = 145.0
 grow_horizontal = 1
 grow_vertical = 1
+
+[node name="Settings" parent="CameraStuff/ProCam2D/NarratroManager" instance=ExtResource("8_fr340")]
+visible = false
+layout_mode = 1
+offset_left = -1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="CounterUi" parent="CameraStuff/ProCam2D" instance=ExtResource("7_720u2")]
 anchors_preset = 1
@@ -74,38 +84,35 @@ anchor_left = 1.0
 anchor_top = 0.0
 anchor_right = 1.0
 anchor_bottom = 0.0
-offset_left = -220.0
-offset_top = -112.0
-offset_right = -220.0
-offset_bottom = -112.0
+offset_left = -222.0
+offset_top = -98.0
+offset_right = -222.0
+offset_bottom = -98.0
 grow_horizontal = 0
 grow_vertical = 1
 
-[node name="Settings" parent="CameraStuff/ProCam2D" instance=ExtResource("8_fr340")]
-visible = false
-
-[node name="PCamMainRoom" type="Node2D" parent="CameraStuff"]
-position = Vector2(240, 135)
+[node name="PCamRoom" type="Node2D" parent="CameraStuff"]
+position = Vector2(-238, 136)
 script = ExtResource("7_q08em")
 room_size = Vector2(480, 270)
 zoom = 1.0
 open_sides = 0
 
-[node name="PCamLeftRoom" type="Node2D" parent="CameraStuff"]
-position = Vector2(-240, 135)
+[node name="PCamRoom3" type="Node2D" parent="CameraStuff"]
+position = Vector2(244, 136)
 script = ExtResource("7_q08em")
 room_size = Vector2(480, 270)
 zoom = 1.0
 open_sides = 0
 
-[node name="PCamRightRoom" type="Node2D" parent="CameraStuff"]
-position = Vector2(720, 135)
+[node name="PCamRoom4" type="Node2D" parent="CameraStuff"]
+position = Vector2(721, 136)
 script = ExtResource("7_q08em")
 room_size = Vector2(480, 270)
 zoom = 1.0
 open_sides = 0
 
-[node name="PCamTopRoom" type="Node2D" parent="CameraStuff"]
+[node name="PCamRoom2" type="Node2D" parent="CameraStuff"]
 position = Vector2(-240, -135)
 script = ExtResource("7_q08em")
 room_size = Vector2(480, 270)
