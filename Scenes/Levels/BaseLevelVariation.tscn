@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccrns5fhjsjei"]
+
+[ext_resource type="Script" path="res://Scripts/Level/LevelVariation.gd" id="1_sgro1"]
+[ext_resource type="PackedScene" uid="uid://b83hgq6s7mpyd" path="res://Scenes/Levels/BaseLevel.tscn" id="2_et7gh"]
+
+[node name="BaseLevelVariation" type="Node2D"]
+script = ExtResource("1_sgro1")
+
+[node name="BaseLevel" parent="." instance=ExtResource("2_et7gh")]

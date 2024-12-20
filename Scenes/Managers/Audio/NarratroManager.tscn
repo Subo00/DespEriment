@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://2sr8g8gif7ty"]
+
+[ext_resource type="Script" path="res://Scripts/Managers/narratro_manager.gd" id="1_hqutw"]
+[ext_resource type="PackedScene" uid="uid://dynwamnwppcye" path="res://Scenes/Managers/UI/DialogBox.tscn" id="2_7rtl5"]
+
+[node name="NarratroManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hqutw")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="DialogBox" parent="." instance=ExtResource("2_7rtl5")]
+layout_mode = 1
+metadata/_edit_use_anchors_ = true
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

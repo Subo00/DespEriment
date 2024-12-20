@@ -1,0 +1,1 @@
+"Now, this is a bit more complicated: You're here to solve puzzles afterall. Try to find a way to the marked point. Use E to interact."

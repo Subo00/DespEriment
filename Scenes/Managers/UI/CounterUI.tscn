@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba5vrnuwv1krm"]
+
+[ext_resource type="FontFile" uid="uid://bex08065eka1" path="res://Assets/Fonts/W95FA.otf" id="1_gnu2g"]
+[ext_resource type="Script" path="res://Scripts/Managers/counter_ui.gd" id="1_wompb"]
+[ext_resource type="Texture2D" uid="uid://rc4j3w17aygg" path="res://Assets/Art/levelArt/level_design_interactables/gear.png" id="2_e4qdc"]
+
+[node name="CounterUi" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_wompb")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 7.0
+offset_right = 70.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("1_gnu2g")
+text = "0/3
+"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 33.0
+offset_bottom = 31.0
+texture = ExtResource("2_e4qdc")
+expand_mode = 3

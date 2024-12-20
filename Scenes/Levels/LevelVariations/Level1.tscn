@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b26morg3g750x"]
+
+[ext_resource type="Script" path="res://Scripts/Level/LevelVariation.gd" id="1_uoxto"]
+[ext_resource type="PackedScene" uid="uid://bxknospugqb4j" path="res://Scenes/Misc/Cheese.tscn" id="4_qheov"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_uoxto")
+
+[node name="Cheese" parent="." instance=ExtResource("4_qheov")]
+position = Vector2(-74, -128)

@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://c16ruydyqmws6"]
+
+[ext_resource type="Script" path="res://Scripts/Misc/all_of_the_lights.gd" id="1_iip20"]
+[ext_resource type="PackedScene" uid="uid://dmvm754lul34s" path="res://Scenes/Misc/BlinkingLight.tscn" id="1_pbu8s"]
+
+[node name="AllOfTheLights" type="Node2D"]
+script = ExtResource("1_iip20")
+
+[node name="BlinkingLight" parent="." instance=ExtResource("1_pbu8s")]
+
+[node name="BlinkingLight2" parent="." instance=ExtResource("1_pbu8s")]
+position = Vector2(16, 0)
+
+[node name="BlinkingLight3" parent="." instance=ExtResource("1_pbu8s")]
+position = Vector2(32, 0)
+
+[node name="BlinkingLight4" parent="." instance=ExtResource("1_pbu8s")]
+position = Vector2(48, 0)
+
+[node name="BlinkingLight5" parent="." instance=ExtResource("1_pbu8s")]
+position = Vector2(0, 16)
+
+[node name="BlinkingLight6" parent="." instance=ExtResource("1_pbu8s")]
+position = Vector2(16, 16)
+
+[node name="BlinkingLight7" parent="." instance=ExtResource("1_pbu8s")]
+position = Vector2(32, 16)
+
+[node name="BlinkingLight8" parent="." instance=ExtResource("1_pbu8s")]
+position = Vector2(48, 16)

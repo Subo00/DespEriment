@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://vo2lntf00mud"]
+
+[ext_resource type="Script" path="res://Scripts/Managers/countdown.gd" id="1_6k3t3"]
+[ext_resource type="FontFile" uid="uid://bex08065eka1" path="res://Assets/Fonts/W95FA.otf" id="2_hr576"]
+
+[node name="Countdown" type="Node2D"]
+script = ExtResource("1_6k3t3")
+time_to_set = 60.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hr576")
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

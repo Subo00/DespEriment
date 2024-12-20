@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://1b7fctsh24t3"]
+
+[ext_resource type="Script" path="res://Scripts/Misc/Interactables/interacatable.gd" id="1_j61q4"]
+[ext_resource type="Texture2D" uid="uid://cou01kijy6q2f" path="res://Assets/Art/levelArt/level_design_interactables/lever.png" id="2_7rsy0"]
+[ext_resource type="Texture2D" uid="uid://uodsfw8g4ejh" path="res://Assets/Art/levelArt/level_design_interactables/e.png" id="3_emdvw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5kkl"]
+size = Vector2(50, 45)
+
+[node name="Interacatable" type="Node2D"]
+script = ExtResource("1_j61q4")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_r5kkl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_7rsy0")
+
+[node name="popUpE" type="TextureRect" parent="."]
+offset_left = -33.0
+offset_top = -92.0
+offset_right = 31.0
+offset_bottom = -28.0
+texture = ExtResource("3_emdvw")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

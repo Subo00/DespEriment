@@ -1,0 +1,117 @@
+[gd_scene load_steps=11 format=3 uid="uid://cccjc6wde3l2i"]
+
+[ext_resource type="Texture2D" uid="uid://g4yirgx7a2ub" path="res://Assets/Art/MainMenu/main_menu_bg.png" id="1_gqiri"]
+[ext_resource type="Script" path="res://Scripts/Managers/main_menu.gd" id="1_rgh5b"]
+[ext_resource type="Texture2D" uid="uid://wupsg7yv0xlj" path="res://Assets/Art/MainMenu/screen_1.png" id="2_h451h"]
+[ext_resource type="Texture2D" uid="uid://cbxgf1hpefhmj" path="res://Assets/Art/MainMenu/screen_2.png" id="3_rtxx6"]
+[ext_resource type="Texture2D" uid="uid://j5quibpscbsn" path="res://Assets/Art/MainMenu/screen_3.png" id="4_sqkdw"]
+[ext_resource type="FontFile" uid="uid://bex08065eka1" path="res://Assets/Fonts/W95FA.otf" id="5_1juno"]
+[ext_resource type="PackedScene" uid="uid://gcyu0c85utl8" path="res://Scenes/MainMenu/Button.tscn" id="5_c40c5"]
+[ext_resource type="PackedScene" uid="uid://dqnnq75n6kw0e" path="res://Scenes/Managers/Audio/Settings.tscn" id="8_06e8q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ymwge"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_h451h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rtxx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_sqkdw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qm6yt"]
+texture = ExtResource("1_gqiri")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rgh5b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(241, 135)
+sprite_frames = SubResource("SpriteFrames_ymwge")
+autoplay = "default"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_qm6yt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -62.5
+offset_top = -174.0
+offset_right = 62.5
+offset_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="StartButton" parent="VBoxContainer" instance=ExtResource("5_c40c5")]
+layout_mode = 2
+text = "Start Game
+"
+
+[node name="OptionsButton" parent="VBoxContainer" instance=ExtResource("5_c40c5")]
+layout_mode = 2
+text = "Options
+"
+
+[node name="ExitButton" parent="VBoxContainer" instance=ExtResource("5_c40c5")]
+layout_mode = 2
+text = "Exit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 59.0
+offset_right = 240.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.596078, 0.890196, 0.356863, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_fonts/font = ExtResource("5_1juno")
+theme_override_font_sizes/font_size = 31
+text = "DespEriment"
+vertical_alignment = 1
+
+[node name="Settings" parent="." instance=ExtResource("8_06e8q")]
+visible = false
+layout_mode = 1
+
+[node name="BackButton" parent="Settings" instance=ExtResource("5_c40c5")]
+custom_minimum_size = Vector2(50, 30)
+layout_mode = 0
+offset_left = 210.0
+offset_top = 222.0
+offset_right = 260.0
+offset_bottom = 252.0
+text = "Back
+"
+
+[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="Settings/BackButton" to="." method="_on_back_button_pressed"]

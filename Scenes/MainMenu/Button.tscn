@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=3 uid="uid://gcyu0c85utl8"]
+
+[ext_resource type="FontFile" uid="uid://bex08065eka1" path="res://Assets/Fonts/W95FA.otf" id="1_pmxp4"]
+[ext_resource type="Texture2D" uid="uid://dix6n1mnvxl4t" path="res://Assets/Art/MainMenu/button.png" id="2_qm3bo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_715wi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2uui"]
+bg_color = Color(0.813258, 0.813258, 0.813257, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkj2p"]
+bg_color = Color(0.281187, 0.281187, 0.281187, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m5vaw"]
+texture = ExtResource("2_qm3bo")
+
+[node name="Button" type="Button"]
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_pmxp4")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/focus = SubResource("StyleBoxEmpty_715wi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j2uui")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lkj2p")
+theme_override_styles/normal = SubResource("StyleBoxTexture_m5vaw")
+text = "Test"

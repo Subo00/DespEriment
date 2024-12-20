@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpa35e8yhfggc"]
+
+[ext_resource type="Texture2D" uid="uid://6cp5ujgnsmds" path="res://Assets/Art/levelArt/level_design_interactables/platform.png" id="1_2ijuq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sq3d5"]
+size = Vector2(34, 10)
+
+[node name="Platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2ijuq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_sq3d5")
+one_way_collision = true

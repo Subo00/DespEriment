@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpxk6ke1jdt7d"]
+
+[ext_resource type="Texture2D" uid="uid://wupsg7yv0xlj" path="res://Assets/Art/MainMenu/screen_1.png" id="1_36vxl"]
+[ext_resource type="Texture2D" uid="uid://cbxgf1hpefhmj" path="res://Assets/Art/MainMenu/screen_2.png" id="2_mnstr"]
+[ext_resource type="Texture2D" uid="uid://j5quibpscbsn" path="res://Assets/Art/MainMenu/screen_3.png" id="3_xt05t"]
+[ext_resource type="Texture2D" uid="uid://g4yirgx7a2ub" path="res://Assets/Art/MainMenu/main_menu_bg.png" id="4_6pg5e"]
+[ext_resource type="PackedScene" uid="uid://xh462hxf5okl" path="res://Scenes/Managers/UI/NarratroManagerCharacterController.tscn" id="5_f7qpr"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_65puo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_36vxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mnstr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xt05t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uv3hl"]
+texture = ExtResource("4_6pg5e")
+
+[node name="CharacterCreation" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(241, 135)
+sprite_frames = SubResource("SpriteFrames_65puo")
+autoplay = "default"
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_uv3hl")
+
+[node name="NarratroManagerCharacterController" parent="." instance=ExtResource("5_f7qpr")]

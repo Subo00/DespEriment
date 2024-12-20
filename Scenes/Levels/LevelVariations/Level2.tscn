@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bstssmuky4oqx"]
+
+[ext_resource type="Script" path="res://Scripts/Level/LevelVariation.gd" id="1_m0ox0"]
+[ext_resource type="PackedScene" uid="uid://bmrcow6awrkox" path="res://Scenes/Managers/GearCounter.tscn" id="2_yq40u"]
+[ext_resource type="PackedScene" uid="uid://fi4aw5ky7a6" path="res://Scenes/Misc/Collectable.tscn" id="3_bdl17"]
+
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_m0ox0")
+
+[node name="GearCounter" parent="." instance=ExtResource("2_yq40u")]
+maxGear = 3
+
+[node name="Collectable" parent="GearCounter" instance=ExtResource("3_bdl17")]
+position = Vector2(-71, 189)
+
+[node name="Collectable2" parent="GearCounter" instance=ExtResource("3_bdl17")]
+position = Vector2(-288, 103)
+
+[node name="Collectable4" parent="GearCounter" instance=ExtResource("3_bdl17")]
+position = Vector2(359, 118)
+
+[node name="Collectable5" parent="GearCounter" instance=ExtResource("3_bdl17")]
+position = Vector2(888, 156)

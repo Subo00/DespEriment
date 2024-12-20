@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://dynwamnwppcye"]
+
+[ext_resource type="Script" path="res://Scripts/Managers/dialog_box.gd" id="1_g8ivq"]
+[ext_resource type="FontFile" uid="uid://bex08065eka1" path="res://Assets/Fonts/W95FA.otf" id="2_splt7"]
+
+[node name="DialogBox" type="PanelContainer"]
+custom_minimum_size = Vector2(0, 100)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_g8ivq")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer"]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_splt7")
+theme_override_font_sizes/normal_font_size = 20
+text = "LOREM IPSUM"

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://xh462hxf5okl"]
+
+[ext_resource type="Script" path="res://Scripts/Managers/narratro_manager_character_controller.gd" id="1_vwusb"]
+[ext_resource type="Texture2D" uid="uid://cn56ve1hnqpyh" path="res://Assets/Art/Intro/camera.png" id="2_10bfv"]
+[ext_resource type="PackedScene" uid="uid://dynwamnwppcye" path="res://Scenes/Managers/UI/DialogBox.tscn" id="2_y7hgk"]
+
+[node name="NarratroManagerCharacterController" type="Node"]
+script = ExtResource("1_vwusb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(239, 131)
+texture = ExtResource("2_10bfv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="DialogBox" parent="." instance=ExtResource("2_y7hgk")]
+
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished"]

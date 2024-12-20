@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dpudhmm6ufom5"]
+
+[ext_resource type="Script" path="res://Scenes/Levels/test.gd" id="1_o1072"]
+[ext_resource type="PackedScene" uid="uid://bmrcow6awrkox" path="res://Scenes/Managers/GearCounter.tscn" id="2_ywyg7"]
+[ext_resource type="PackedScene" uid="uid://fi4aw5ky7a6" path="res://Scenes/Misc/Collectable.tscn" id="3_eayai"]
+
+[node name="Test" type="Label"]
+text = "test
+"
+script = ExtResource("1_o1072")
+
+[node name="GearCounter" parent="." instance=ExtResource("2_ywyg7")]
+
+[node name="Collectable" parent="GearCounter" instance=ExtResource("3_eayai")]
+position = Vector2(83, 62)
+
+[node name="Collectable2" parent="GearCounter" instance=ExtResource("3_eayai")]
+position = Vector2(83, 62)
+
+[node name="Collectable3" parent="GearCounter" instance=ExtResource("3_eayai")]
+position = Vector2(83, 62)
+
+[node name="Collectable4" parent="GearCounter" instance=ExtResource("3_eayai")]
+position = Vector2(83, 62)

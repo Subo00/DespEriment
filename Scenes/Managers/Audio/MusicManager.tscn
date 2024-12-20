@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://cc2yek0148opt"]
+
+[ext_resource type="Script" path="res://Scripts/Managers/Audio/music_manager.gd" id="1_jpcp2"]
+[ext_resource type="AudioStream" uid="uid://eftf5ixfkqk4" path="res://Assets/Sounds/music.mp3" id="2_ka1i2"]
+
+[node name="Music" type="Node2D"]
+script = ExtResource("1_jpcp2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_ka1i2")
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

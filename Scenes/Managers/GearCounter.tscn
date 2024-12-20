@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmrcow6awrkox"]
+
+[ext_resource type="Script" path="res://Scripts/Managers/gear_counter.gd" id="1_rngo3"]
+
+[node name="GearCounter" type="Node"]
+script = ExtResource("1_rngo3")

@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxknospugqb4j"]
+
+[ext_resource type="Texture2D" uid="uid://cdnd8jtyyxqao" path="res://Assets/Art/levelArt/level_design_interactables/cheese.png" id="1_2ducn"]
+[ext_resource type="Script" path="res://Scripts/Misc/cheese.gd" id="1_x2sqb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5nfpf"]
+size = Vector2(32, 25)
+
+[node name="Cheese" type="Node2D"]
+script = ExtResource("1_x2sqb")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_5nfpf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_2ducn")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]

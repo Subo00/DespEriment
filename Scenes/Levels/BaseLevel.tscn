@@ -1,0 +1,264 @@
+[gd_scene load_steps=39 format=3 uid="uid://b83hgq6s7mpyd"]
+
+[ext_resource type="Texture2D" uid="uid://dway20aa0vd0b" path="res://Assets/Art/levelArt/level_design_static/bg_main_room.png" id="1_3u5hf"]
+[ext_resource type="Texture2D" uid="uid://qpileoxuishr" path="res://Assets/Art/Screens/main_screen_layout_1.png" id="1_6dt4x"]
+[ext_resource type="Texture2D" uid="uid://b1wavdbsn80nn" path="res://Assets/Art/Screens/main_screen_layout_2.png" id="2_ireiw"]
+[ext_resource type="Texture2D" uid="uid://divsne7gn31kh" path="res://Assets/Art/levelArt/level_design_static/bg_left_room.png" id="3_6yhyi"]
+[ext_resource type="Texture2D" uid="uid://dt4yelwwqi76b" path="res://Assets/Art/Screens/main_screen_layout_3.png" id="3_utiuq"]
+[ext_resource type="Texture2D" uid="uid://kfb066ialfij" path="res://Assets/Art/levelArt/level_design_static/top_room_bg.png" id="4_7cwni"]
+[ext_resource type="Texture2D" uid="uid://5eb6b0bjxton" path="res://Assets/Art/Screens/main_screen_layout_4.png" id="4_gg7mu"]
+[ext_resource type="Texture2D" uid="uid://bmbeih5wkju0w" path="res://Assets/Art/levelArt/level_design_static/bg_right_room.png" id="5_5ls6j"]
+[ext_resource type="Texture2D" uid="uid://c8dnwupdyrnv4" path="res://Assets/Art/levelArt/level_design_static/first_area.png" id="5_8i8hd"]
+[ext_resource type="Texture2D" uid="uid://6f8rif5etptb" path="res://Assets/Art/Screens/left_screen_layout_1.png" id="5_qu6qu"]
+[ext_resource type="Texture2D" uid="uid://cymucf01io10q" path="res://Assets/Art/Screens/left_screen_layout_2.png" id="6_t4iqx"]
+[ext_resource type="Texture2D" uid="uid://cnotj52hlgegb" path="res://Assets/Art/Screens/left_screen_layout_3.png" id="7_66qai"]
+[ext_resource type="Texture2D" uid="uid://cj1nk5lgptp30" path="res://Assets/Art/levelArt/level_design_static/room_right.png" id="7_xv2xp"]
+[ext_resource type="Texture2D" uid="uid://dqm131rd76ssb" path="res://Assets/Art/levelArt/level_design_static/room_left.png" id="8_i6hfo"]
+[ext_resource type="Texture2D" uid="uid://brotj15q72dnl" path="res://Assets/Art/Screens/left_screen_layout_4.png" id="8_p1qy1"]
+[ext_resource type="Texture2D" uid="uid://btm6s17mbiemh" path="res://Assets/Art/levelArt/level_design_static/room_top.png" id="9_1rovy"]
+[ext_resource type="Texture2D" uid="uid://c31cj84bmjvnn" path="res://Assets/Art/Screens/screensright.png" id="9_uex2x"]
+[ext_resource type="Texture2D" uid="uid://6mbvus5iyjsp" path="res://Assets/Art/Screens/screensright_1.png" id="10_o4y6v"]
+[ext_resource type="Texture2D" uid="uid://b3jpw2sqjrnmc" path="res://Assets/Art/Screens/top_screen_layout_1.png" id="11_oqlct"]
+[ext_resource type="Texture2D" uid="uid://pvtajttf844o" path="res://Assets/Art/Screens/top_screen_layout_2.png" id="12_f0jp8"]
+[ext_resource type="Texture2D" uid="uid://vmbslt0wu0qg" path="res://Assets/Art/Screens/top_screen_layout_3.png" id="13_a3a1l"]
+[ext_resource type="Texture2D" uid="uid://ctymfqan3loil" path="res://Assets/Art/levelArt/level_design_interactables/countdown.png" id="22_t6nd8"]
+[ext_resource type="PackedScene" uid="uid://vo2lntf00mud" path="res://Scenes/Managers/Countdown.tscn" id="23_bktcs"]
+[ext_resource type="Texture2D" uid="uid://cita6xticym58" path="res://Assets/Art/levelArt/level_design_interactables/crates.png" id="24_44viy"]
+[ext_resource type="PackedScene" uid="uid://cpa35e8yhfggc" path="res://Scenes/Misc/Platform.tscn" id="25_4qrfr"]
+[ext_resource type="PackedScene" uid="uid://c16ruydyqmws6" path="res://Scenes/Misc/AllOfTheLights.tscn" id="26_ca581"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n4g5f"]
+distance = 18.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gxa1n"]
+normal = Vector2(-0.999671, 0.0256326)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_e6gvp"]
+normal = Vector2(1, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_horfq"]
+size = Vector2(346, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6h5b4"]
+size = Vector2(5, 255)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58qjc"]
+size = Vector2(27, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvtif"]
+size = Vector2(11, 88)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aicdv"]
+size = Vector2(12, 69.5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x5yvb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6dt4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ireiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_utiuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gg7mu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_juqe3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_qu6qu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_t4iqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_66qai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_p1qy1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m5mrp"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("9_uex2x")
+}, {
+"duration": 5.0,
+"texture": ExtResource("10_o4y6v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_66ujq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_oqlct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_f0jp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_a3a1l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[node name="BaseLevel" type="Node2D"]
+
+[node name="Collisions" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(-1, 252)
+shape = SubResource("WorldBoundaryShape2D_n4g5f")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(946, 43)
+shape = SubResource("WorldBoundaryShape2D_gxa1n")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(-464, 58)
+shape = SubResource("WorldBoundaryShape2D_e6gvp")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(-177, -15)
+shape = SubResource("RectangleShape2D_horfq")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(-7.5, -137.5)
+shape = SubResource("RectangleShape2D_6h5b4")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(-447.5, -11)
+shape = SubResource("RectangleShape2D_58qjc")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(-8.5, 34)
+shape = SubResource("RectangleShape2D_cvtif")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(487, 40.25)
+shape = SubResource("RectangleShape2D_aicdv")
+
+[node name="Screens" type="Node2D" parent="."]
+
+[node name="MainScreen" type="AnimatedSprite2D" parent="Screens"]
+position = Vector2(240, 123)
+sprite_frames = SubResource("SpriteFrames_x5yvb")
+autoplay = "default"
+
+[node name="LeftScreen" type="AnimatedSprite2D" parent="Screens"]
+position = Vector2(-271, 120)
+sprite_frames = SubResource("SpriteFrames_juqe3")
+autoplay = "default"
+
+[node name="RightScreen" type="AnimatedSprite2D" parent="Screens"]
+position = Vector2(759, 94)
+sprite_frames = SubResource("SpriteFrames_m5mrp")
+autoplay = "default"
+
+[node name="TopScreen" type="AnimatedSprite2D" parent="Screens"]
+position = Vector2(-247, -231)
+sprite_frames = SubResource("SpriteFrames_66ujq")
+autoplay = "default"
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Background"]
+z_index = -1
+offset_right = 480.0
+offset_bottom = 270.0
+texture = ExtResource("1_3u5hf")
+
+[node name="TextureRect2" type="TextureRect" parent="Background"]
+z_index = -1
+offset_left = -480.0
+offset_bottom = 270.0
+texture = ExtResource("3_6yhyi")
+
+[node name="TextureRect4" type="TextureRect" parent="Background"]
+z_index = -1
+offset_left = -480.0
+offset_top = -270.0
+texture = ExtResource("4_7cwni")
+
+[node name="TextureRect3" type="TextureRect" parent="Background"]
+z_index = -1
+offset_left = 480.0
+offset_right = 960.0
+offset_bottom = 270.0
+texture = ExtResource("5_5ls6j")
+
+[node name="Platform" parent="." instance=ExtResource("25_4qrfr")]
+position = Vector2(-412, 4)
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="Walls"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 480.0
+offset_bottom = 270.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_8i8hd")
+
+[node name="TextureRect3" type="TextureRect" parent="Walls"]
+offset_left = 480.0
+offset_right = 960.0
+offset_bottom = 270.0
+texture = ExtResource("7_xv2xp")
+
+[node name="TextureRect2" type="TextureRect" parent="Walls"]
+offset_left = -480.0
+offset_bottom = 270.0
+texture = ExtResource("8_i6hfo")
+
+[node name="TextureRect4" type="TextureRect" parent="Walls"]
+offset_left = -480.0
+offset_top = -270.0
+texture = ExtResource("9_1rovy")
+
+[node name="Timer" type="Node2D" parent="."]
+position = Vector2(88, 128)
+
+[node name="Sprite2D" type="Sprite2D" parent="Timer"]
+texture = ExtResource("22_t6nd8")
+
+[node name="Countdown" parent="Timer/Sprite2D" instance=ExtResource("23_bktcs")]
+position = Vector2(-24, -6)
+
+[node name="Boxes" type="Node2D" parent="."]
+position = Vector2(-397, 166)
+
+[node name="Sprite2D" type="Sprite2D" parent="Boxes"]
+texture = ExtResource("24_44viy")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Boxes"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boxes/StaticBody2D"]
+polygon = PackedVector2Array(57, 0, 30, -1, 29, -65, -45, -65, -43, 29, -60, 29, -59, 64, 58, 65)
+
+[node name="AllOfTheLights" parent="." instance=ExtResource("26_ca581")]
+position = Vector2(-342, -142)

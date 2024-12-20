@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://fi4aw5ky7a6"]
+
+[ext_resource type="Texture2D" uid="uid://rc4j3w17aygg" path="res://Assets/Art/levelArt/level_design_interactables/gear.png" id="1_cp4nm"]
+[ext_resource type="Script" path="res://Scripts/Misc/collectable.gd" id="1_pn6bl"]
+[ext_resource type="AudioStream" uid="uid://drqxouoguxt6t" path="res://Assets/Sounds/collect .mp3" id="3_hmmlc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1i3dp"]
+radius = 18.0278
+
+[node name="Collectable" type="Node2D"]
+script = ExtResource("1_pn6bl")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_1i3dp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cp4nm")
+
+[node name="collectSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_hmmlc")
+bus = &"SFX"
+
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_shape_entered" from="Area2D" to="." method="_on_area_2d_body_shape_entered"]
