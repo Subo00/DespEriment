@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://dy322c0v7emvr"]
+
+[ext_resource type="Script" path="res://Scripts/Level/LevelVariation.gd" id="1_22x52"]
+[ext_resource type="PackedScene" uid="uid://cfelt7ke0jpfw" path="res://Scenes/Misc/Interactables/leverSideRight.tscn" id="4_1d2qh"]
+[ext_resource type="PackedScene" uid="uid://dq27x4fmmhaim" path="res://Scenes/Misc/Interactables/Button.tscn" id="5_cf2g1"]
+[ext_resource type="PackedScene" uid="uid://ca2amnts7u0p0" path="res://Scenes/Misc/Interactables/leverFront.tscn" id="5_x2sul"]
+[ext_resource type="PackedScene" uid="uid://fpucduco56e1" path="res://Scenes/Misc/Interactables/Machine.tscn" id="6_ts44n"]
+
+[node name="BaseLevelVariation" type="Node2D"]
+script = ExtResource("1_22x52")
+
+[node name="Interacatable" parent="." instance=ExtResource("4_1d2qh")]
+position = Vector2(935, 173)
+
+[node name="LeverFront" parent="." instance=ExtResource("5_x2sul")]
+position = Vector2(415, 158)
+
+[node name="Interacatable2" parent="." instance=ExtResource("5_cf2g1")]
+position = Vector2(-151, 219)
+
+[node name="Machine" parent="." instance=ExtResource("6_ts44n")]
+position = Vector2(696, 194)
