@@ -1,6 +1,7 @@
+class_name GearCounter
 extends Node
 
-@export var maxGear = 0
+var maxGear = 0
 var currentGear = 0
 
 # Called when the node enters the scene tree for the first time.

@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://b4jyb7c3hhvou"]
+
+[ext_resource type="Script" path="res://Scripts/Misc/Interactables/machine.gd" id="1_0h57f"]
+[ext_resource type="Texture2D" uid="uid://c4oqsn6lfdver" path="res://Assets/Art/levelArt/level_design_interactables/machine_thing.png" id="2_86rgu"]
+[ext_resource type="Texture2D" uid="uid://bthxs6ec2kd80" path="res://Assets/Art/levelArt/level_design_interactables/machine_thing_on.png" id="3_w011y"]
+[ext_resource type="Texture2D" uid="uid://uodsfw8g4ejh" path="res://Assets/Art/levelArt/level_design_interactables/e.png" id="4_avon8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r5kkl"]
+size = Vector2(105, 62)
+
+[node name="Machine" type="Node2D"]
+script = ExtResource("1_0h57f")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-21.5, 0)
+shape = SubResource("RectangleShape2D_r5kkl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_86rgu")
+
+[node name="Working" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_w011y")
+
+[node name="popUpE" type="TextureRect" parent="."]
+offset_left = -55.0
+offset_top = -92.0
+offset_right = 9.0
+offset_bottom = -28.0
+texture = ExtResource("4_avon8")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

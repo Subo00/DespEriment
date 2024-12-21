@@ -14,7 +14,7 @@ var is_paused = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Signals.NarratorAudioEndEnded.connect(handle_ending)
-	load_level_variation(1)
+	load_level_variation(variation_count)
 	
 	#await get_tree().create_timer(2.0).timeout
 	
