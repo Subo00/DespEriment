@@ -1,6 +1,8 @@
+class_name GameManger
+
 extends Node2D
 
-@onready var narratro_manager: NarratorManager = $CameraStuff/ProCam2D/NarratroManager
+@onready var narratro_manager: NarratorManager = $CameraStuff/ProCam2D/NarratorManager
 @onready var player: CharacterBody2D = $Player
 
 #for level loading
@@ -38,12 +40,12 @@ func load_level_variation(level: int) -> void:
 
 	
 func handle_ending(is_success: bool) -> void:
-	if is_success == false and variation_count == 1:
+	if !is_success and variation_count == 1:
 		return
 	
 	Signals.OnCleanUp.emit()
 	
-	if is_success == false and variation_count == 2:
+	if !is_success:
 		load_level_variation(variation_count)
 		return
 	

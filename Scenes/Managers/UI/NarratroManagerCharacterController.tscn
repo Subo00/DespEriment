@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://xh462hxf5okl"]
 
-[ext_resource type="Script" path="res://Scripts/Managers/narratro_manager_character_controller.gd" id="1_vwusb"]
+[ext_resource type="Script" path="res://Scripts/Managers/narrator_manager_character_controller.gd" id="1_vwusb"]
 [ext_resource type="Texture2D" uid="uid://cn56ve1hnqpyh" path="res://Assets/Art/Intro/camera.png" id="2_10bfv"]
 [ext_resource type="PackedScene" uid="uid://dynwamnwppcye" path="res://Scenes/Managers/UI/DialogBox.tscn" id="2_y7hgk"]
 
