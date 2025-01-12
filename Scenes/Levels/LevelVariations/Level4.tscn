@@ -18,7 +18,7 @@ position = Vector2(575, 176)
 position = Vector2(806, 124)
 
 [node name="Collectable3" parent="GearCounter" instance=ExtResource("4_o8o4j")]
-position = Vector2(-67, 47)
+position = Vector2(-114, 143)
 
 [node name="Collectable4" parent="GearCounter" instance=ExtResource("4_o8o4j")]
 position = Vector2(-247, -84)

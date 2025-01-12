@@ -8,7 +8,6 @@
 script = ExtResource("1_m0ox0")
 
 [node name="GearCounter" parent="." instance=ExtResource("2_yq40u")]
-maxGear = 3
 
 [node name="Collectable" parent="GearCounter" instance=ExtResource("3_bdl17")]
 position = Vector2(-71, 189)
