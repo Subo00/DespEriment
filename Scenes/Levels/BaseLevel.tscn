@@ -258,7 +258,7 @@ texture = ExtResource("24_44viy")
 [node name="StaticBody2D" type="StaticBody2D" parent="Boxes"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Boxes/StaticBody2D"]
-polygon = PackedVector2Array(57, 0, 30, -1, 29, -65, -45, -65, -43, 29, -60, 29, -59, 64, 58, 65)
+polygon = PackedVector2Array(57, 0, 30, -1, 29, -65, -75, -67, -43, 29, -60, 29, -59, 64, 58, 65)
 
 [node name="AllOfTheLights" parent="." instance=ExtResource("26_ca581")]
 position = Vector2(-342, -142)
