@@ -1,7 +1,8 @@
-[gd_scene load_steps=39 format=3 uid="uid://b83hgq6s7mpyd"]
+[gd_scene load_steps=40 format=3 uid="uid://b83hgq6s7mpyd"]
 
 [ext_resource type="Texture2D" uid="uid://dway20aa0vd0b" path="res://Assets/Art/levelArt/level_design_static/bg_main_room.png" id="1_3u5hf"]
 [ext_resource type="Texture2D" uid="uid://qpileoxuishr" path="res://Assets/Art/Screens/main_screen_layout_1.png" id="1_6dt4x"]
+[ext_resource type="Script" path="res://Scripts/Level/LevelBackgroundBase.gd" id="1_wu1qr"]
 [ext_resource type="Texture2D" uid="uid://b1wavdbsn80nn" path="res://Assets/Art/Screens/main_screen_layout_2.png" id="2_ireiw"]
 [ext_resource type="Texture2D" uid="uid://divsne7gn31kh" path="res://Assets/Art/levelArt/level_design_static/bg_left_room.png" id="3_6yhyi"]
 [ext_resource type="Texture2D" uid="uid://dt4yelwwqi76b" path="res://Assets/Art/Screens/main_screen_layout_3.png" id="3_utiuq"]
@@ -123,6 +124,7 @@ animations = [{
 }]
 
 [node name="BaseLevel" type="Node2D"]
+script = ExtResource("1_wu1qr")
 
 [node name="Collisions" type="StaticBody2D" parent="."]
 
