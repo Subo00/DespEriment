@@ -18,6 +18,7 @@ signal StartNarratonEnd(is_success: bool)
 #Interactables
 signal OnInteraction
 signal OnInteracted
+signal OnDoorToggle(door_number: int)
 
 #utiliy
 signal OnTimerTimeout
