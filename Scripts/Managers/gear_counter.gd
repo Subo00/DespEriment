@@ -1,10 +1,13 @@
 class_name GearCounter
 extends Node
 
+#To use add it to the LevelVariation you created
+#Then add Gears as its children
+
+
 var maxGear = 0
 var currentGear = 0
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	Signals.OnGearCollect.connect(increment_gear)
 	maxGear = get_child_count()
