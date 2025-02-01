@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cywqffthmfnys"]
 
-[ext_resource type="Script" path="res://Scripts/Level/LevelVariation.gd" id="1_6vbbr"]
+[ext_resource type="Script" path="res://Scripts/Level/LevelVariationBase.gd" id="1_6vbbr"]
 [ext_resource type="PackedScene" uid="uid://daqwu08wvfhgp" path="res://Scenes/Misc/Interactables/Interacatable.tscn" id="3_1fah7"]
 [ext_resource type="PackedScene" uid="uid://dq27x4fmmhaim" path="res://Scenes/Misc/Interactables/Button.tscn" id="4_fvuiw"]
 [ext_resource type="PackedScene" uid="uid://bxknospugqb4j" path="res://Scenes/Misc/Cheese.tscn" id="5_mgc26"]

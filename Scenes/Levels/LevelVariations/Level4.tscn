@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://d0p0ylewkgu7x"]
 
-[ext_resource type="Script" path="res://Scripts/Level/LevelVariation.gd" id="1_6wobg"]
+[ext_resource type="Script" path="res://Scripts/Level/LevelVariationBase.gd" id="1_6wobg"]
 [ext_resource type="PackedScene" uid="uid://bmrcow6awrkox" path="res://Scenes/Managers/GearCounter.tscn" id="3_lv3mw"]
 [ext_resource type="PackedScene" uid="uid://fi4aw5ky7a6" path="res://Scenes/Misc/Collectable.tscn" id="4_o8o4j"]
 [ext_resource type="PackedScene" uid="uid://cfelt7ke0jpfw" path="res://Scenes/Misc/Interactables/leverSideRight.tscn" id="5_n0vdq"]
