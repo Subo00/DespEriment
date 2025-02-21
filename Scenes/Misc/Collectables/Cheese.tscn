@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bxknospugqb4j"]
 
 [ext_resource type="Texture2D" uid="uid://cdnd8jtyyxqao" path="res://Assets/Art/levelArt/level_design_interactables/cheese.png" id="1_2ducn"]
-[ext_resource type="Script" path="res://Scripts/Misc/cheese.gd" id="1_x2sqb"]
+[ext_resource type="Script" path="res://Scripts/Misc/Collectables/cheese.gd" id="1_x2sqb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5nfpf"]
 size = Vector2(32, 25)
