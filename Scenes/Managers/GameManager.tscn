@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bq3i0r2w5xp3q"]
+[gd_scene load_steps=12 format=3 uid="uid://bq3i0r2w5xp3q"]
 
 [ext_resource type="Script" path="res://Scripts/Managers/game_manager.gd" id="1_rp6g5"]
 [ext_resource type="PackedScene" uid="uid://b83hgq6s7mpyd" path="res://Scenes/Levels/LevelBackgrounds/Background1.tscn" id="2_ucep5"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://addons/ProCam2D/scripts/pcam_room.gd" id="7_q08em"]
 [ext_resource type="PackedScene" uid="uid://dqnnq75n6kw0e" path="res://Scenes/Managers/Audio/Settings.tscn" id="8_fr340"]
 [ext_resource type="PackedScene" uid="uid://cc2yek0148opt" path="res://Scenes/Managers/Audio/MusicManager.tscn" id="10_botg0"]
+[ext_resource type="PackedScene" uid="uid://bsj3neorg8iji" path="res://Scenes/Misc/CollisionDetectors/CollisionDetector.tscn" id="11_24ql0"]
 
 [node name="GameManager" type="Node2D"]
 script = ExtResource("1_rp6g5")
@@ -134,3 +135,6 @@ zoom = 1.0
 open_sides = 0
 
 [node name="Music" parent="." instance=ExtResource("10_botg0")]
+
+[node name="CollisionDetector" parent="." instance=ExtResource("11_24ql0")]
+position = Vector2(-37, 168)
