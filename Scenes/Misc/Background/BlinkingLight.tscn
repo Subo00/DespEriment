@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dmvm754lul34s"]
 
-[ext_resource type="Script" path="res://Scripts/Misc/blinking_light.gd" id="1_i0pkh"]
+[ext_resource type="Script" path="res://Scripts/Misc/Background/blinking_light.gd" id="1_i0pkh"]
 [ext_resource type="Texture2D" uid="uid://ch15guvfgfdjv" path="res://Assets/Art/levelArt/level_design_interactables/light_off.png" id="2_ucka3"]
 
 [node name="BlinkingLight" type="Node2D"]

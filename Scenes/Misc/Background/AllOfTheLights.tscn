@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c16ruydyqmws6"]
 
-[ext_resource type="Script" path="res://Scripts/Misc/all_of_the_lights.gd" id="1_iip20"]
-[ext_resource type="PackedScene" uid="uid://dmvm754lul34s" path="res://Scenes/Misc/BlinkingLight.tscn" id="1_pbu8s"]
+[ext_resource type="Script" path="res://Scripts/Misc/Background/all_of_the_lights.gd" id="1_iip20"]
+[ext_resource type="PackedScene" uid="uid://dmvm754lul34s" path="res://Scenes/Misc/Background/BlinkingLight.tscn" id="1_pbu8s"]
 
 [node name="AllOfTheLights" type="Node2D"]
 script = ExtResource("1_iip20")
