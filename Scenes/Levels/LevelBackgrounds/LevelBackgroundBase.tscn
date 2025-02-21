@@ -26,7 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://ctymfqan3loil" path="res://Assets/Art/levelArt/level_design_interactables/countdown.png" id="24_x84c2"]
 [ext_resource type="PackedScene" uid="uid://vo2lntf00mud" path="res://Scenes/Managers/Countdown.tscn" id="25_pmbs5"]
 [ext_resource type="Texture2D" uid="uid://cita6xticym58" path="res://Assets/Art/levelArt/level_design_interactables/crates.png" id="26_kcw4o"]
-[ext_resource type="PackedScene" uid="uid://c16ruydyqmws6" path="res://Scenes/Misc/AllOfTheLights.tscn" id="27_y81tm"]
+[ext_resource type="PackedScene" uid="uid://c16ruydyqmws6" path="res://Scenes/Misc/Background/AllOfTheLights.tscn" id="27_y81tm"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_n4g5f"]
 distance = 18.0

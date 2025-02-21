@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://b26morg3g750x"]
+
+[ext_resource type="Script" path="res://Scripts/Level/LevelVariationBase.gd" id="1_uoxto"]
+[ext_resource type="PackedScene" uid="uid://c537nyjny3n1e" path="res://Scenes/Misc/Door.tscn" id="3_0giae"]
+[ext_resource type="PackedScene" uid="uid://ca2amnts7u0p0" path="res://Scenes/Misc/Interactables/leverFront.tscn" id="4_akg8n"]
+[ext_resource type="PackedScene" uid="uid://bxknospugqb4j" path="res://Scenes/Misc/Cheese.tscn" id="4_qheov"]
+[ext_resource type="Script" path="res://Scripts/Misc/Interactables/toggle_doors.gd" id="5_l726f"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_uoxto")
+
+[node name="Cheese" parent="." instance=ExtResource("4_qheov")]
+position = Vector2(-74, -128)
+
+[node name="Door" parent="." instance=ExtResource("3_0giae")]
+position = Vector2(0, 176)
+
+[node name="LeverFront" parent="." instance=ExtResource("4_akg8n")]
+position = Vector2(307, 161)
+script = ExtResource("5_l726f")

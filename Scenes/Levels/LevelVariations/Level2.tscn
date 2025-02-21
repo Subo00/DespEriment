@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Level/LevelVariationBase.gd" id="1_m0ox0"]
 [ext_resource type="PackedScene" uid="uid://bmrcow6awrkox" path="res://Scenes/Managers/GearCounter.tscn" id="2_yq40u"]
-[ext_resource type="PackedScene" uid="uid://fi4aw5ky7a6" path="res://Scenes/Misc/Collectable.tscn" id="3_bdl17"]
+[ext_resource type="PackedScene" uid="uid://fi4aw5ky7a6" path="res://Scenes/Misc/Collectables/Collectable.tscn" id="3_bdl17"]
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_m0ox0")
