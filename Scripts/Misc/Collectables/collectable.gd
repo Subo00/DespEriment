@@ -1,3 +1,4 @@
+class_name Collectable
 extends Node2D
 
 @onready var collect_sfx: AudioStreamPlayer2D = $collectSFX
